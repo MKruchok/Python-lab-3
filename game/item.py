@@ -1,13 +1,16 @@
 from enums.customer_type import CustomerType
 
+
 class Item:
-    def __init__(self, name: str, weight: int, price: int, rating: int, customer_type: CustomerType):
+    def __init__(
+        self, name: str, weight: int, price: int,
+        rating: int, customer_type: CustomerType
+    ):
         self.name = name
         self.weight = weight
         self.price = price
         self.rating = rating
         self.customer_type = customer_type
-
 
     def __repr__(self):
         return f"name: {self.name}, weight: {self.weight}, price: {self.price}, rating: {self.rating}"
@@ -35,10 +38,9 @@ class Item:
 
     def get_rating(self):
         return self.rating
-    
+
     def set_customer_type(self, customer_type):
         self.customer_type = customer_type
 
     def get_customer_type(self):
         return self.customer_type
-
